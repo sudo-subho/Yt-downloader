@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    color: #ffffff;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #ff0000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-item:hover {
+    background-color: #ff0000;
+}
+
+.nav-link.active {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* Styles for non-active tabs */
+.nav-link {
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Change background color on hover for non-active tabs */
+.nav-link:not(.active):hover {
+    background-color: #cc0000;
+    color: white;
+}
+
+.nav-item a:hover {
+    color: #ffffff;
+}
+
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        background-color: #1f1f1f;
+        width: 200px;
+        border-radius: 10px;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+header {
+    margin-top: 100px;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+
+p {
+    font-size: 1.25rem;
+    color: #aaaaaa;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+#url-input {
+    width: 60%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+#download-btn {
+    padding: 15px 25px;
+    font-size: 1rem;
+    border: none;
+    background: #ff0000;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+    transition: background 0.3s;
+}
+
+#download-btn:hover {
+    background: #cc0000;
+}
+
+.ai-image img {
+    max-width: 20%;
+    height: auto;
+    margin-top: 50px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #121212;
+    color: #777;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #url-input {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #url-input {
+        width: 100%;
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+
+    #download-btn {
+        border-radius: 25px;
+        margin-bottom: 20px;
+
+    }
+
+    .ai-image img {
+        max-width: 50%;
+    }
+}
